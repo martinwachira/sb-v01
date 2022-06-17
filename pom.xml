@@ -8,10 +8,10 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example.sbv1</groupId>
-	<artifactId>sbv1</artifactId>
+	<groupId>io.javabrains.svb1</groupId>
+	<artifactId>svb1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sbv1</name>
+	<name>svb1</name>
 	<description>Test 1 project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

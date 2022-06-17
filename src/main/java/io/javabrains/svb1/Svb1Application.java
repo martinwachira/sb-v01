@@ -1,13 +1,13 @@
-package com.example.sbv1;
+package io.javabrains.svb1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Sbv1Application {
+public class Svb1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Sbv1Application.class, args);
+		SpringApplication.run(Svb1Application.class, args);
 	}
 
 }
