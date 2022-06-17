@@ -1,10 +1,10 @@
-package io.javabrains.svb1;
+package io.javabrains.courseapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Svb1ApplicationTests {
+class CourseapiApplicationTests {
 
 	@Test
 	void contextLoads() {
