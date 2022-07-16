@@ -1,13 +1,19 @@
 package io.javabrains.courseapi.topic;
 
-import java.time.LocalDate;
-import java.util.Date;
+import org.hibernate.annotations.CreationTimestamp;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.time.LocalDate;
+
+@Entity
 public class Topic {
 
+    @Id
     private String id;
     private String name;
     private String description;
+    @CreationTimestamp
     private LocalDate createdAt;
 
     public Topic() {
