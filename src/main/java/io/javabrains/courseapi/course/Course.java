@@ -1,13 +1,15 @@
-package io.javabrains.courseapi.topic;
+package io.javabrains.courseapi.course;
 
+import io.javabrains.courseapi.topic.Topic;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 @Entity
-public class Topic {
+public class Course {
 
     @Id
     private String id;
@@ -16,15 +18,27 @@ public class Topic {
     @CreationTimestamp
     private LocalDate createdAt;
 
-    public Topic() {
+    @ManyToOne
+    private Topic topic;
+
+    public Topic getTopic() {
+        return topic;
     }
 
-    public Topic(String id, String name, String description) {
+    public void setTopic(Topic topic) {
+        this.topic = topic;
+    }
+
+    public Course() {
+    }
+
+    public Course(String id, String name, String description, LocalDate createdAt, String topicId) {
         super();
         this.id = id;
         this.name = name;
         this.description = description;
         this.createdAt = createdAt;
+        this.topic = new Topic(topicId, "", "");
     }
 
     public String getId() {
