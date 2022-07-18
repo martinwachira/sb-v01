@@ -14,13 +14,6 @@ public class TopicService {
 
     @Autowired
     private TopicRepository topicRepository;
-    private List<Topic> topics = new ArrayList<> (Arrays.asList(
-            new Topic("1", "Spring Boot", "SB Desc", LocalDate.now()),
-            new Topic("2", "Crypto Currency", "Crypto Desc", LocalDate.now()),
-            new Topic("3", "Artificial Intelligence", "AI Desc", LocalDate.now()),
-            new Topic("4", "Money Marketing", "MM Desc", LocalDate.now()),
-            new Topic("5", "Space", "Space Desc", LocalDate.now())
-    ));
 
     public List<Topic> getAllTopics() {
         List<Topic> topics = new ArrayList<>();
@@ -38,13 +31,14 @@ public class TopicService {
     }
 
     public void updateTopic(String id, Topic topic) {
-        for(int i=0; i<topics.size(); i++){
-            Topic t = topics.get(i);
-            if(t.getId().equals(id)){
-                topics.set(i, topic);
-                return;
-            }
-        }
+        topicRepository.save(topic);
+//        for(int i=0; i<topics.size(); i++){
+//            Topic t = topics.get(i);
+//            if(t.getId().equals(id)){
+//                topics.set(i, topic);
+//                return;
+//            }
+//        }
     }
 
     public void deleteTopic(String id) {
