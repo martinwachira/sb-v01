@@ -11,7 +11,7 @@
 	<groupId>io.javabrains.courseapi</groupId>
 	<artifactId>courseapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>courseApi</name>
 	<description>Test 2 project for Spring Boot</description>
 	<properties>
